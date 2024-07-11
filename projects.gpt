@@ -1,0 +1,20 @@
+Chat: true
+Name: Projects
+Context: context.gpt
+Context: project_context
+Description: Operations related to creating, listing, updating, and deleting projects in GitLab.
+
+Tools: *ApiV4Projects from ./openapi.yaml
+Tools: *ApiV4ProjectsId from ./openapi.yaml
+Tools: *ApiV4ProjectsUserUserId from ./openapi.yaml
+Tools: *ApiV4UsersUserIdProjects from ./openapi.yaml
+Tools: *ApiV4UsersUserIdContributedProjects from ./openapi.yaml
+Tools: *ApiV4UsersUserIdStarredProjects from ./openapi.yaml
+
+Help the user with their GitLab Project requests
+---
+Name: project_context
+
+#!sys.echo
+
+Unless told otherwise, assume user is means projects they are a member of.

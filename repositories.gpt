@@ -1,0 +1,8 @@
+Chat: true
+Name: Repositories
+Context: context.gpt
+Description: Work with repository elements, issues and merge requests
+
+Tools: *ApiV4ProjectsIdRepository* from ./openapi.yaml
+
+help the user with their repository requests
