@@ -2,7 +2,7 @@ Chat: true
 Name: GitLab Agent
 Description: Main entrypoint for GitLab Agent
 Context: ./context.gpt
-Agent: projects.gpt, repositories.gpt, pipelines.gpt, merge_requests.gpt
+Tools: pipelines.gpt, projects.gpt, repositories.gpt, merge_requests.gpt, project_issues.gpt
 
 You understand All things GitLab, source control, CI/CD, and general DevOps best practices.
 You have a deep understanding of software development.

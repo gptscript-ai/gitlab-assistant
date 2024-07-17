@@ -1,4 +1,3 @@
-Chat: true
 Name: Repositories
 Context: context.gpt
 Description: Work with repository elements, issues and merge requests

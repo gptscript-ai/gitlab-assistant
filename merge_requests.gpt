@@ -1,4 +1,3 @@
-Chat: true
 Name: Merge Request Agent
 Context: ./context.gpt
 Description: Interact with MergeRequest Objects in GitLab
