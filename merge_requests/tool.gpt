@@ -1,6 +1,6 @@
 Name: Merge Request Agent
-Context: ./context.gpt
+Context: ../context/tool.gpt
 Description: Interact with MergeRequest Objects in GitLab
-Tools: *MergeRequests* from ./openapi.yaml
+Tools: *MergeRequests* from ../openapi.yaml
 
 Help the user with merge request tasks

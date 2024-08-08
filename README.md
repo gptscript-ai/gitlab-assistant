@@ -15,7 +15,7 @@ You will need a PAT (Personal Access Token) from GitLab to interact with the API
 To get started you can run the following command:
 
 ```bash
-gptscript github.com/cloudnautique/gitlab-assistant
+gptscript github.com/gptscript-ai/gitlab-assistant
 ```
 
 You will be prompted for an OpenAI API key and a GitLab Personal Access Token.
@@ -28,34 +28,41 @@ The GitLab Assistant can interact with the following resources:
 
 - **Main entrypoint for GitLab Agent**: Understands all things GitLab, source control, CI/CD, and general DevOps best practices.
 
-### Pipelines
+### Tools
+
+#### Pipelines
 
 - **Operations related to pipelines**: Creating, listing, updating, and deleting pipelines and jobs in GitLab.
 
-### Projects
+#### Projects
 
 - **Operations related to projects**: Creating, listing, updating, and deleting projects in GitLab. Does not cover all things projects.
 
-### Repositories
+#### Repositories
 
 - **Operations related to repositories**: Creating, listing, updating, and deleting repositories in GitLab. This also provides access to branches etc.
 
-### Merge Requests
+#### Merge Requests
 
 - **Operations related to merge requests**: Creating, listing, updating, and deleting merge requests in GitLab. You can also comment, close, merge and check the status of the builds/pipelines.
 
-## Adding a new Agent
+## Adding a new Tool
 
-When adding a new agent, you should leverage the existing `context.gpt` and create a new file.
+When adding a new tool to this repo, clone this tool to your local machine.
 
-Tools should be a subset and focus on a single resource because there are to many endpoints to cover in a single agent.
+Then add a directory for the new resource/tool.
+
+In the tool file, you should leverage the existing `../context/tool.gpt` and create a new file.
+
+Tools should be a subset and focus on a single resource because there are to many endpoints to cover in a single script.
+
+Example
 
 ```
-Name: New Agent
+Name: resource_name
 Description: Interact with XYZ in GitLab
-Context: context.gpt
+Context: ../context/tool.gpt
 Tools: *resources* from openapi.yaml
-Chat: true
 
 Handle the users requests for XYZ in gitlab
 ```
