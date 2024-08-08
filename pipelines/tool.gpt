@@ -1,12 +1,12 @@
 Name: Pipelines
-Context: context.gpt
+Context: ../context/tool.gpt
 Context: pipeline_context
 Description: Operations related to creating, listing, updating, and deleting pipelines and jobs in GitLab.
 
-Tools: *ApiV4ProjectsIdPipeline from ./openapi.yaml
-Tools: *ApiV4ProjectsIdPipelines from ./openapi.yaml
-Tools: *ApiV4ProjectsIdPipelines* from ./openapi.yaml
-Tools: *ApiV4ProjectsIdJobs* from ./openapi.yaml
+Tools: *ApiV4ProjectsIdPipeline from ../openapi.yaml
+Tools: *ApiV4ProjectsIdPipelines from ../openapi.yaml
+Tools: *ApiV4ProjectsIdPipelines* from ../openapi.yaml
+Tools: *ApiV4ProjectsIdJobs* from ../openapi.yaml
 
 Help the user with their pipeline requests
 ---

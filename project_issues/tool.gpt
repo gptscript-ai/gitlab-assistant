@@ -1,8 +1,8 @@
 Name: project_issues
-Context: context.gpt
+Context: ../context/tool.gpt
 Description: This tool can work with issues in a GitLab project
-Tools: *ApiV4ProjectsIdIssues* from openapi.yaml
-Tools: getApiV4ProjectsIdMergeRequestsMergeRequestIidClosesIssues from openapi.yaml
+Tools: *ApiV4ProjectsIdIssues* from ../openapi.yaml
+Tools: getApiV4ProjectsIdMergeRequestsMergeRequestIidClosesIssues from ../openapi.yaml
 Args: input: Task to complete for issues within the project
 Args: projectId: ID or URL-Encoded path of the project
 

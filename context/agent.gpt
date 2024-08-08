@@ -8,6 +8,7 @@ Share Context: github.com/gptscript-ai/context/chat-finish
 Share Context: github.com/gptscript-ai/context/workspace
 Share Context: github.com/gptscript-ai/context/os
 Share Context: github.com/gptscript-ai/context/filesystem
+Context: ./tool.gpt
 
 Share Tools: sys.time.now
 Share Tools: github.com/gptscript-ai/answers-from-the-internet
@@ -23,8 +24,3 @@ Always run tools serially.
 Always ask what the user would like to do next if there is an empty prompt. If something doesn't look right,
 Ask the user if they want to troubleshoot further.
 If there is an empty prompt, ask them what the wish to do next.
-
-Always follow these GitLab Paradigms:
-Ids are numerical or paths that have <owner>/<project>
-Always URL encode paths when used as an ID
-Use default options for the API calls unless it directly addresses the users request
